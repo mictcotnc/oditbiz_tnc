@@ -1,0 +1,206 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to right,
+    #f0f4f8,
+    #ffffff
+  ); /* Light gradient background */
+  color: #333; /* Dark Gray */
+}
+
+header {
+  background: #002d5b; /* Dark Blue */
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0077c2; /* Light Blue */
+}
+
+main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #ffffff; /* White */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Elevated shadow */
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+h2 {
+  color: #002d5b; /* Dark Blue */
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  font-size: 24px;
+  color: #0077c2; /* Light Blue */
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.contact-info i:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #002d5b; /* Dark Blue */
+  color: #ffffff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow on top */
+}
+
+footer nav a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+footer nav a:hover {
+  color: #0077c2; /* Light Blue */
+}
+/* Card Row Styling */
+.card-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  white-space: nowrap; /* Prevents line wrapping */
+  padding-bottom: 10px; /* Adds padding to avoid scrollbar overlap */
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  min-width: 220px; /* Sets a minimum width for consistency */
+  max-width: 250px; /* Prevents cards from growing too large */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0; /* Prevents cards from shrinking */
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+.card-content {
+  text-align: left; /* Aligns text to the left */
+  overflow: hidden; /* Prevents overflow */
+  text-overflow: ellipsis; /* Adds ellipsis if the text is too long */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.card-content h3 {
+  font-size: 16px;
+  color: #2c3e50;
+  margin: 0;
+  overflow: hidden; /* Prevents overflow */
+  text-overflow: ellipsis; /* Adds ellipsis if the text is too long */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 5px 0 0;
+  overflow: hidden; /* Prevents overflow */
+  text-overflow: ellipsis; /* Adds ellipsis if the text is too long */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.card-content a {
+  text-decoration: none;
+  color: #3498db;
+  overflow: hidden; /* Prevents overflow */
+  text-overflow: ellipsis; /* Adds ellipsis if the text is too long */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-row {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible; /* Allows cards to expand vertically */
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    flex-shrink: 1; /* Allows cards to shrink to fit smaller screens */
+  }
+
+  .card-content {
+    white-space: normal; /* Allows text wrapping on small screens */
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
